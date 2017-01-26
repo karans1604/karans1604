@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0">
+	<xs:element name="books">
+		<xs:complexType> 	
+			<xs:sequence>
+				<xs:element name="book" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="booktitle" type="xs:string" />
+							<xs:element name="ISBN" type="xs:string" />
+							<xs:element name="authors">
+								<xs:element name="author_name" type="xs:string" maxOccurs="unbounded" />
+							</xs:element>
+							<xs:element name="description" type="xs:string" />
+							<xs:element name="price" type="xs:string" />
+							<xs:attribute name="Can" type="xs:double" use="required" />																
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
